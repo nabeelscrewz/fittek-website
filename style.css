@@ -36,7 +36,6 @@ h1, h2, h3, .brand-name, .section-eyebrow, .hero-eyebrow, .curated-tagline {
     font-family: 'Cinzel', serif;
     font-weight: 400;
 }
-
 /* Minimal Header Bar */
 header {
     background-color: rgba(11, 11, 11, 0.95);
@@ -51,14 +50,29 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.brand-name {
-    color: var(--white);
-    font-size: 1.4rem;
-    font-weight: 500;
+/* PASTE THE NEW RULES DIRECTLY HERE: */
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between logo and text */
     text-decoration: none;
-    letter-spacing: 4px;
 }
 
+.brand-logo {
+    height: 40px; 
+    width: auto;  
+    display: block;
+}
+
+.brand-name {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+/* The rest of your file (nav a, nav a:hover, etc.) stays exactly the same below */
 nav a {
     color: #999999;
     text-decoration: none;
@@ -69,6 +83,10 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+
+
+
 
 nav a:hover {
     color: var(--champagne-gold);
