@@ -1,15 +1,17 @@
-/* Color Palette & Custom Root Properties */
+/* --- High-End Luxury & Minimal Design System --- */
 :root {
-    --matte-black: #111111;
+    --matte-black: #0b0b0b;
+    --dark-grey: #161616;
+    --charcoal: #262626;
+    --subtle-grey: #666666;
+    --fine-border: #e8e8e8;
+    --light-bg: #fcfbfa;
     --white: #ffffff;
-    --champagne-gold: #D4AF37;
-    --dark-grey: #222222;
-    --mid-grey: #333333;
-    --light-grey: #fcfcfc;
-    --border-color: #e5e5e5;
+    --champagne-gold: #c5a059; /* Soft, contemporary desaturated gold */
+    --gold-hover: #e5c382;
 }
 
-/* Reset Settings */
+/* Base Level Settings */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,401 +25,391 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--white);
-    color: var(--dark-grey);
-    line-height: 1.7;
+    color: var(--matte-black);
+    line-height: 1.8;
     overflow-x: hidden;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .brand-name {
+h1, h2, h3, .brand-name, .section-eyebrow, .hero-eyebrow, .curated-tagline {
     font-family: 'Cinzel', serif;
-    letter-spacing: 2px;
+    font-weight: 400;
 }
 
-/* Header & Navigation Bar */
+/* Minimal Header Bar */
 header {
-    background-color: var(--matte-black);
-    padding: 25px 5%;
+    background-color: rgba(11, 11, 11, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--mid-grey);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .brand-name {
-    color: var(--champagne-gold);
-    font-size: 1.6rem;
-    font-weight: 700;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 500;
     text-decoration: none;
+    letter-spacing: 4px;
 }
 
 nav a {
-    color: var(--white);
+    color: #999999;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    margin-left: 35px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    transition: color 0.4s ease;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 nav a:hover {
     color: var(--champagne-gold);
 }
 
-/* Hero Banner Styling */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
-                url('https://unsplash.com') no-repeat center center/cover;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Micro Elements */
+.section-eyebrow {
+    font-size: 0.75rem;
+    color: var(--champagne-gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.minimal-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--matte-black);
+}
+
+.minimal-title.white-text {
+    color: var(--white);
+}
+
+.center-header {
     text-align: center;
-    padding: 0 20px;
+    margin-bottom: 70px;
+}
+
+/* Fine Cinematic Hero Banner */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                url('https://unsplash.com') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 750px;
+}
+
+.hero-eyebrow {
+    color: var(--champagne-gold);
+    font-size: 0.9rem;
+    letter-spacing: 6px;
+    display: block;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    color: var(--white);
-    font-weight: 400;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
-    color: #dddddd;
-    font-weight: 300;
-}
-
-.btn {
-    background-color: var(--champagne-gold);
-    color: var(--matte-black);
-    padding: 14px 35px;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--champagne-gold);
-    display: inline-block;
-}
-
-.btn:hover {
-    background-color: transparent;
-    color: var(--champagne-gold);
-}
-
-/* Global Sections */
-section {
-    padding: 100px 8%;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 50px;
-    position: relative;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-    color: var(--matte-black);
-    font-weight: 400;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 1px;
-    background-color: var(--champagne-gold);
-}
-
-/* About Section */
-.about {
-    background-color: var(--light-grey);
-    text-align: center;
-}
-
-.about-content {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.lead-text {
-    font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    color: var(--matte-black);
+    font-size: 3.4rem;
+    line-height: 1.25;
     margin-bottom: 25px;
+    color: var(--white);
     letter-spacing: 1px;
 }
 
-.about p {
-    margin-bottom: 20px;
-    font-size: 1.05rem;
-    color: #555555;
-    font-weight: 300;
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 45px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 200;
 }
 
-.tagline {
-    font-family: 'Cinzel', serif;
+.btn-luxury {
+    border: 1px solid var(--champagne-gold);
+    background: transparent;
+    color: var(--white);
+    padding: 16px 40px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+.btn-luxury:hover {
+    background-color: var(--champagne-gold);
+    color: var(--matte-black);
+}
+
+/* The Studio Section Layout (Minimal Split) */
+.about {
+    padding: 120px 0 120px 10%;
+    background-color: var(--light-bg);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+}
+
+.about-text-panel {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-text-panel h2 {
+    margin-bottom: 30px;
+}
+
+.about-text-panel p {
+    font-size: 0.95rem;
+    color: #444444;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.curated-tagline {
+    font-size: 0.95rem;
     color: var(--champagne-gold);
-    font-size: 1.2rem;
-    font-weight: 600;
     letter-spacing: 6px;
     margin-top: 45px;
 }
 
-/* Services Dynamic Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+.about-visual-panel {
+    flex: 1.2;
+    height: 550px;
+    background: url('https://unsplash.com') no-repeat center center/cover;
 }
 
-.service-card {
-    background: var(--white);
-    padding: 50px 35px;
-    border: 1px solid var(--border-color);
-    transition: all 0.4s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--champagne-gold);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-}
-
-.service-card h3 {
-    color: var(--matte-black);
-    margin-bottom: 15px;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.service-card p {
-    color: #666;
-    font-size: 0.95rem;
-    font-weight: 300;
-}
-
-/* Portfolio Gallery Showcase */
-.projects {
+/* Immersive Expertise Strips Section (Images under text cards) */
+.services {
     background-color: var(--matte-black);
-    color: var(--white);
+    padding: 120px 6%;
 }
 
-.projects .section-title {
-    color: var(--white);
-}
-
-.portfolio-subtitle {
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 300;
-    color: #bbbbbb;
-}
-
-.project-grid {
+.luxury-services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 20px;
 }
 
-.project-item {
-    background-color: var(--dark-grey);
-    border: 1px solid var(--mid-grey);
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
+.service-strip-card {
     position: relative;
+    height: 420px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.project-item span {
-    font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    color: var(--white);
-    z-index: 2;
-}
+/* Unique Background Image Placement */
+.service-bg-1 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.service-bg-2 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.service-bg-3 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.service-bg-4 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.service-bg-5 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.service-bg-6 { background: url('https://unsplash.com') no-repeat center center/cover; }
 
-.project-item::before {
-    content: '';
+.card-overlay {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(to top, rgba(11,11,11,0.9) 25%, rgba(11,11,11,0.4) 100%);
+    transition: opacity 0.4s ease;
+    z-index: 1;
 }
 
-.project-item:hover {
-    background-color: #1a1a1a;
+.card-inner-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
 }
 
-.project-item:hover::before {
-    border-color: var(--champagne-gold);
-    top: 10px; left: 10px; right: 10px; bottom: 10px;
+.card-number {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: var(--champagne-gold);
+    display: block;
+    margin-bottom: 10px;
 }
 
-/* Why Choose Us Section */
-.why-us {
+.service-strip-card h3 {
+    color: var(--white);
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.service-strip-card p {
+    color: #cccccc;
+    font-size: 0.85rem;
+    font-weight: 200;
+    max-width: 90%;
+    opacity: 0.85;
+    transition: opacity 0.4s ease;
+}
+
+.service-strip-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-strip-card:hover .card-overlay {
+    background: linear-gradient(to top, rgba(11,11,11,0.95) 40%, rgba(11,11,11,0.6) 100%);
+}
+
+/* Portfolio Wall - Fluid Minimalist Blocks */
+.portfolio {
+    padding: 120px 0;
     background-color: var(--white);
 }
 
-.values-grid {
+.immersive-portfolio-wall {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px; /* Hairline separation */
+    background-color: var(--white);
+    padding: 0 4px;
 }
 
-.value-card {
-    padding: 25px;
-    background: var(--light-grey);
-    border-left: 3px solid var(--champagne-gold);
-    font-weight: 500;
-    font-size: 1rem;
+.portfolio-cell {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Artistic Master Portfolio Image Placeholders */
+.cell-bg-1 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.cell-bg-2 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.cell-bg-3 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.cell-bg-4 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.cell-bg-5 { background: url('https://unsplash.com') no-repeat center center/cover; }
+.cell-bg-6 { background: url('https://unsplash.com') no-repeat center center/cover; }
+
+.cell-hover-details {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(11, 11, 11, 0.85);
     display: flex;
     align-items: center;
-    color: var(--matte-black);
-}
-
-.bullet {
-    width: 6px;
-    height: 6px;
-    background-color: var(--champagne-gold);
-    margin-right: 15px;
-    border-radius: 50%;
-}
-
-/* Contact Block Layout */
-.contact {
-    background-color: var(--matte-black);
-    color: var(--white);
-    border-bottom: 1px solid var(--mid-grey);
-}
-
-.contact .section-title {
-    color: var(--white);
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 60px;
-    margin-top: 20px;
-}
-
-.contact-info h3 {
-    font-size: 1.8rem;
-    color: var(--champagne-gold);
-    margin-bottom: 25px;
-    font-weight: 400;
-}
-
-.contact-info p {
-    margin-bottom: 20px;
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: #cccccc;
-}
-
-.contact-info .location {
-    color: var(--white);
-    font-weight: 400;
-}
-
-.contact-info a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: var(--champagne-gold);
-}
-
-.contact-info .wa-link {
-    color: var(--champagne-gold);
-    font-weight: 500;
-}
-
-/* Form Styles */
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 20px;
-    background: var(--dark-grey);
-    border: 1px solid var(--mid-grey);
-    color: var(--white);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--champagne-gold);
-}
-
-.submit-btn {
-    background: var(--champagne-gold);
-    color: var(--matte-black);
-    border: none;
-    padding: 15px 35px;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 100%;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-    transition: background 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #bd9a2b;
-}
-
-/* Fine-print Footer */
-footer {
-    background-color: var(--matte-black);
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    padding: 20px;
     text-align: center;
-    padding: 30px 20px;
-    color: #666666;
-    font-size: 0.85rem;
+}
+
+.cell-hover-details h3 {
+    color: var(--white);
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: translateY(15px);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.portfolio-cell:hover .cell-hover-details {
+    opacity: 1;
+}
+
+.portfolio-cell:hover .cell-hover-details h3 {
+    transform: translateY(0);
+}
+
+/* Minimalist Statement Blocks */
+.minimal-statement {
+    padding: 120px 10%;
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--fine-border);
+}
+
+.statement-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.statement-column {
+    flex: 1;
+    max-width: 450px;
+}
+
+.statement-column h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.statement-column p {
+    font-size: 0.95rem;
+    color: var(--subtle-grey);
     font-weight: 300;
 }
 
-/* Fully Responsive Breakpoints */
-@media (max-width: 992px) {
-    section { padding: 80px 5%; }
-    .hero h1 { font-size: 2.8rem; }
+.statement-column-list {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-    nav a {
-        margin: 0 10px;
-        font-size: 0.8rem;
-    }
-    .hero h1 { font-size: 2.2rem; }
-    .hero p { font-size: 1.1rem; }
-    .section-title { font-size: 2rem; }
-    .contact-container { gap: 40px; }
+.list-item-minimal {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--matte-black);
+    display: flex;
+    align-items: center;
 }
+
+.list-item-minimal span {
+    color: var(--champagne-gold);
+    margin-right: 15px;
+}
+
+/* Inquiries Configuration Panel */
+.inquire {
+    background-color: var(--matte-black);
+    color: var(--white);
+    padding: 120px 10%;
+}
+
+.inquire .section-eyebrow {
+    margin-bottom: 20px;
+}
+
+.inquire-wrapper {
+    display: flex;
+    gap: 10%;
+}
+
+.inquire-brief {
+    flex: 1;
+}
+
+.inquire-brief h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+.address-card-luxury p {
+    margin-bottom: 15px;
