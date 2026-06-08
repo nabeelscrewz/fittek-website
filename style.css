@@ -1,4 +1,4 @@
-/* --- High-End Luxury & Minimal Design System --- */
+/* --- FIT TEK LLC | HIGH-END LUXURY & MINIMAL DESIGN SYSTEM --- */
 :root {
     --matte-black: #0b0b0b;
     --dark-grey: #161616;
@@ -7,11 +7,11 @@
     --fine-border: #e8e8e8;
     --light-bg: #fcfbfa;
     --white: #ffffff;
-    --champagne-gold: #c5a059; /* Soft, contemporary desaturated gold */
+    --champagne-gold: #c5a059; /* Soft, desaturated architectural gold */
     --gold-hover: #e5c382;
 }
 
-/* Base Level Settings */
+/* Base Level Reset Settings */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -36,11 +36,12 @@ h1, h2, h3, .brand-name, .section-eyebrow, .hero-eyebrow, .curated-tagline {
     font-family: 'Cinzel', serif;
     font-weight: 400;
 }
-/* Minimal Header Bar */
+
+/* Minimal Header Bar & Brand Identity Alignment */
 header {
     background-color: rgba(11, 11, 11, 0.95);
     backdrop-filter: blur(10px);
-    padding: 30px 6%;
+    padding: 25px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,20 +51,22 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-/* PASTE THE NEW RULES DIRECTLY HERE: */
+/* Side-by-side branding container */
 .brand-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Spacing between logo and text */
+    gap: 15px; /* Immaculate spacing between logo mark and typography */
     text-decoration: none;
 }
 
+/* Sizing structure tailored for your white square geometric logo mark */
 .brand-logo {
     height: 40px; 
     width: auto;  
     display: block;
 }
 
+/* Premium branding font next to your logo */
 .brand-name {
     color: var(--white);
     font-size: 1.3rem;
@@ -72,7 +75,6 @@ header {
     line-height: 1;
 }
 
-/* The rest of your file (nav a, nav a:hover, etc.) stays exactly the same below */
 nav a {
     color: #999999;
     text-decoration: none;
@@ -84,15 +86,11 @@ nav a {
     letter-spacing: 2px;
 }
 
-
-
-
-
 nav a:hover {
     color: var(--champagne-gold);
 }
 
-/* Micro Elements */
+/* Editorial Micro Elements */
 .section-eyebrow {
     font-size: 0.75rem;
     color: var(--champagne-gold);
@@ -119,7 +117,7 @@ nav a:hover {
     margin-bottom: 70px;
 }
 
-/* Fine Cinematic Hero Banner */
+/* Cinematic Full-Bleed Hero Banner */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
                 url('https://unsplash.com') no-repeat center center/cover;
@@ -174,7 +172,7 @@ nav a:hover {
     color: var(--matte-black);
 }
 
-/* The Studio Section Layout (Minimal Split) */
+/* The Studio Section Layout (Asymmetric Split Panel) */
 .about {
     padding: 120px 0 120px 10%;
     background-color: var(--light-bg);
@@ -209,13 +207,14 @@ nav a:hover {
     margin-top: 45px;
 }
 
+/* Creative Architectural Fragment Graphic Wall */
 .about-visual-panel {
     flex: 1.2;
     height: 550px;
     background: url('https://unsplash.com') no-repeat center center/cover;
 }
 
-/* Immersive Expertise Strips Section (Images under text cards) */
+/* Immersive Expertise Grid System (Photography under text panels) */
 .services {
     background-color: var(--matte-black);
     padding: 120px 6%;
@@ -237,7 +236,7 @@ nav a:hover {
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Unique Background Image Placement */
+/* Direct Content Imagery Links (Swap out the web links here if needed) */
 .service-bg-1 { background: url('https://unsplash.com') no-repeat center center/cover; }
 .service-bg-2 { background: url('https://unsplash.com') no-repeat center center/cover; }
 .service-bg-3 { background: url('https://unsplash.com') no-repeat center center/cover; }
@@ -291,7 +290,7 @@ nav a:hover {
     background: linear-gradient(to top, rgba(11,11,11,0.95) 40%, rgba(11,11,11,0.6) 100%);
 }
 
-/* Portfolio Wall - Fluid Minimalist Blocks */
+/* Portfolio Wall - Fluid Minimalist Display Blocks */
 .portfolio {
     padding: 120px 0;
     background-color: var(--white);
@@ -300,7 +299,7 @@ nav a:hover {
 .immersive-portfolio-wall {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4px; /* Hairline separation */
+    gap: 4px; /* Crisp hairline gap lines */
     background-color: var(--white);
     padding: 0 4px;
 }
@@ -312,7 +311,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* Artistic Master Portfolio Image Placeholders */
+/* Immersive Project Showcase Image Links */
 .cell-bg-1 { background: url('https://unsplash.com') no-repeat center center/cover; }
 .cell-bg-2 { background: url('https://unsplash.com') no-repeat center center/cover; }
 .cell-bg-3 { background: url('https://unsplash.com') no-repeat center center/cover; }
@@ -350,7 +349,7 @@ nav a:hover {
     transform: translateY(0);
 }
 
-/* Minimalist Statement Blocks */
+/* Why Choose Us - Minimal Statement Section */
 .minimal-statement {
     padding: 120px 10%;
     background-color: var(--light-bg);
@@ -397,37 +396,3 @@ nav a:hover {
 }
 
 .list-item-minimal span {
-    color: var(--champagne-gold);
-    margin-right: 15px;
-}
-
-/* Inquiries Configuration Panel */
-.inquire {
-    background-color: var(--matte-black);
-    color: var(--white);
-    padding: 120px 10%;
-}
-
-.inquire .section-eyebrow {
-    margin-bottom: 20px;
-}
-
-.inquire-wrapper {
-    display: flex;
-    gap: 10%;
-}
-
-.inquire-brief {
-    flex: 1;
-}
-
-.inquire-brief h2 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 1.3;
-    margin-bottom: 40px;
-}
-
-.address-card-luxury p {
-    margin-bottom: 15px;
